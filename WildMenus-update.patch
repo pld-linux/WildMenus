@@ -1,0 +1,39 @@
+diff -ur o-WildMenus/Menus.m WildMenus/Menus.m
+--- o-WildMenus/Menus.m	2004-02-11 06:57:36.000000000 -0700
++++ WildMenus/Menus.m	2004-11-13 15:41:54.022387334 -0700
+@@ -291,7 +291,7 @@
+         break;
+     
+       case NSImageLeft:
+-        cellFrame.origin.x  += 4 + _imageWidth + xDist; // _horizontalEdgePad
++        cellFrame.origin.x  += 4 + _imageWidth + GSCellTextImageXDist; // _horizontalEdgePad
+         cellFrame.size.width = _titleWidth;
+         break;
+         
+@@ -583,7 +583,7 @@
+           NSMenuItemCell *msr = [[[_attachedMenu supermenu] menuRepresentation] 
+ 			menuItemCellForItemAtIndex:
+ 			[[_attachedMenu supermenu] indexOfItemWithTitle: [_attachedMenu title]]];
+-          neededImageAndTitleWidth += [msr titleWidth] + xDist;
++          neededImageAndTitleWidth += [msr titleWidth] + GSCellTextImageXDist;
+         }
+ 
+       if (_titleView)
+@@ -627,7 +627,7 @@
+      
+         case NSImageLeft:
+         case NSImageRight:
+-          anImageAndTitleWidth = anImageWidth + aTitleWidth + xDist;
++          anImageAndTitleWidth = anImageWidth + aTitleWidth + GSCellTextImageXDist;
+           break;
+ 
+         case NSImageBelow:
+@@ -883,7 +883,7 @@
+ 
+ 	  if ([aCell imageWidth])
+ 	    {
+-	      titleWidth += [aCell imageWidth] + xDist;
++	      titleWidth += [aCell imageWidth] + GSCellTextImageXDist;
+ 	    }
+ 
+ 	  elem.rect = NSMakeRect (currentX,
