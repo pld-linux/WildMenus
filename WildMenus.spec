@@ -1,4 +1,5 @@
 Summary:	Theme bundle for GNUstep to provide horizontal menus
+Summary(pl):	Paczka z motywem dla GNUstepa daj±cym poziome menu
 Name:		WildMenus
 Version:	0.06
 Release:	1
@@ -11,7 +12,7 @@ BuildRequires:	gnustep-gui-devel >= 0.8.7
 Requires:	gnustep-gui >= 0.8.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _prefix         /usr/lib/GNUstep
+%define         _prefix         /usr/%{_lib}/GNUstep
 
 %define		_noautoreqdep	libGL.so.1 libGLU.so.1
 
@@ -25,8 +26,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %endif
 
 %description
-WildMenus is a theme bundle for GNUStep, loadable by settings in
+WildMenus is a theme bundle for GNUstep, loadable by settings in
 UserDefaults.
+
+%description -l pl
+WildMenus to paczka z motywem dla GNUstepa, ³adowalnym poprzez
+ustawienia w UserDefaults.
 
 %prep
 %setup -q -n %{name}
@@ -41,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 . %{_prefix}/System/Library/Makefiles/GNUstep.sh
 
 %{__make} install \
-	GNUSTEP_INSTALLATION_DIR=$RPM_BUILD_ROOT%{_prefix}/System \
+	GNUSTEP_INSTALLATION_DIR=$RPM_BUILD_ROOT%{_prefix}/System
 
 %clean
 rm -rf $RPM_BUILD_ROOT
