@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Libraries
 Source0:	http://www.cc.utah.edu/~msh3/%{name}-%{version}.tgz
 # Source0-md5:	cb6f669a8856c753c526f62827632693
+Patch0:		%{name}-update.patch
 BuildRequires:	gnustep-gui-devel >= 0.8.7
 Requires:	gnustep-gui >= 0.8.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -34,6 +35,7 @@ ustawienia w UserDefaults.
 
 %prep
 %setup -q -n %{name}
+%patch0 -p1
 
 %build
 . %{_prefix}/System/Library/Makefiles/GNUstep.sh
