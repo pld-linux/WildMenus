@@ -1,13 +1,12 @@
 Summary:	Theme bundle for GNUstep to provide horizontal menus
 Summary(pl):	Paczka z motywem dla GNUstepa daj±cym poziome menu
 Name:		WildMenus
-Version:	0.06
-Release:	3
+Version:	0.07
+Release:	1
 License:	GPL
 Group:		X11/Libraries
 Source0:	http://www.cc.utah.edu/~msh3/%{name}-%{version}.tgz
-# Source0-md5:	cb6f669a8856c753c526f62827632693
-Patch0:		%{name}-update.patch
+# Source0-md5:	60299d8bd74693301c74d83c9d222cf5
 BuildRequires:	gnustep-gui-devel >= 0.8.7
 Requires:	gnustep-gui >= 0.8.7
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,7 +34,6 @@ ustawienia w UserDefaults.
 
 %prep
 %setup -q -n %{name}
-%patch0 -p1
 
 %build
 . %{_prefix}/System/Library/Makefiles/GNUstep.sh
