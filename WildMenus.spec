@@ -1,5 +1,5 @@
 Summary:	Theme bundle for GNUstep to provide horizontal menus
-Summary(pl.UTF-8):   Paczka z motywem dla GNUstepa dającym poziome menu
+Summary(pl.UTF-8):	Paczka z motywem dla GNUstepa dającym poziome menu
 Name:		WildMenus
 Version:	0.07
 Release:	1
